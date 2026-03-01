@@ -83,13 +83,7 @@ export default function Solutions() {
         </h2>
 
         {/* Grid */}
-        <div
-          style={{
-            display:             'grid',
-            gridTemplateColumns: 'repeat(4, 1fr)',
-            gap:                 2,
-          }}
-        >
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 2 }} className="grid-4">
           {INDUSTRIES.map((item) => (
             <IndustryCard key={item.title} item={item} />
           ))}

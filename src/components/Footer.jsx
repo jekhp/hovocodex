@@ -28,6 +28,7 @@ export default function Footer({ onContact }) {
             gap:                 60,
             marginBottom:        60,
           }}
+          className="grid-2col"
         >
           {/* Brand column */}
           <div>

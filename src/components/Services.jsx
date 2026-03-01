@@ -136,13 +136,7 @@ export default function Services() {
         </div>
 
         {/* Grid */}
-        <div
-          style={{
-            display:             'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap:                 2,
-          }}
-        >
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 2 }} className="grid-3">
           {SERVICES.map((s, i) => (
             <ServiceCard key={i} service={s} />
           ))}

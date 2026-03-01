@@ -12,6 +12,7 @@ export default function Impact() {
           gap:                 80,
           alignItems:          'center',
         }}
+        className="grid-2col"
       >
         {/* Left: text */}
         <div>

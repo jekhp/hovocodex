@@ -178,3 +178,37 @@ body {
   margin-bottom: 8px;
   text-transform: uppercase;
 }
+
+/* ─── RESPONSIVE ─── */
+
+/* Tablet (≤ 900px) */
+@media (max-width: 900px) {
+  .desktop-nav { display: none !important; }
+  .hamburger   { display: flex !important; }
+}
+
+/* Tablet grid fixes */
+@media (max-width: 900px) {
+  /* Services: 2 columnas */
+  #servicios .grid-3   { grid-template-columns: repeat(2, 1fr) !important; }
+  /* Industries: 2 columnas */
+  #soluciones .grid-4  { grid-template-columns: repeat(2, 1fr) !important; }
+  /* Process: scroll horizontal */
+  #proceso .flex-steps { flex-direction: column !important; }
+  /* Impact: una columna */
+  #impacto .grid-2col  { grid-template-columns: 1fr !important; }
+  /* Footer: una columna */
+  footer .grid-3col    { grid-template-columns: 1fr !important; }
+}
+
+/* Mobile (≤ 600px) */
+@media (max-width: 600px) {
+  #servicios .grid-3   { grid-template-columns: 1fr !important; }
+  #soluciones .grid-4  { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* Modal full width */
+  .contact-modal-inner { width: 100% !important; max-width: 100% !important; border-left: none !important; border-right: none !important; }
+
+  /* Hero stats en fila compacta */
+  .hero-stats { gap: 28px !important; }
+}

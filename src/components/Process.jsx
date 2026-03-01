@@ -70,7 +70,7 @@ export default function Process() {
         </div>
 
         {/* Steps */}
-        <div style={{ display: 'flex', gap: 2 }}>
+        <div style={{ display: 'flex', gap: 2 }} className="grid-2col">
           {STEPS.map((step, i) => (
             <StepCard key={step.n} step={step} index={i} />
           ))}

@@ -93,6 +93,7 @@ export default function ContactModal({ open, onClose }) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
+        className="contact-modal-inner"
         style={{
           background: 'var(--surface)',
           border:     '1px solid var(--border)',
