@@ -58,7 +58,7 @@ export default function Footer({ onContact }) {
         {/* Bottom */}
         <div style={{ borderTop: '1px solid var(--border)', paddingTop: 24, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
           <span style={{ fontFamily: "'Space Mono',monospace", fontSize: 9, color: 'var(--muted)', letterSpacing: 1 }}>© 2026 HOVOCODEX TECHNOLOGIES. TODOS LOS DERECHOS RESERVADOS.</span>
-          <span style={{ fontFamily: "'Space Mono',monospace", fontSize: 9, color: 'var(--muted)', letterSpacing: 1 }}>BUILT WITH ◆ AI + CODE</span>
+          <span style={{ fontFamily: "'Space Mono',monospace", fontSize: 9, color: 'var(--muted)', letterSpacing: 1 }}>Tecnologies</span>
         </div>
       </div>
     </footer>
