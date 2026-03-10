@@ -127,7 +127,7 @@ export const IMPACT_STATS = [
 
 // ─── HERO STATS ───
 export const HERO_STATS = [
-  { n: '3+', label: 'Experiencia' }, 
+  { n: '3+', label: 'Años' }, 
   { n: '98%', label: 'Satisfacción' }, 
   { n: '10x', label: 'Crecimiento' },
 ]
