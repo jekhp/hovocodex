@@ -19,7 +19,7 @@ export const SERVICES = [
     tag: 'SOFTWARE',
     title: 'Software a Medida',
     desc: 'El software que tu negocio necesita exactamente. Escalable, eficiente y construido para crecer contigo sin límites.',
-    features: ['Automatización de tareas del negocio','Mensajes y pedidos organizados automáticamente','Sistema adaptado a tu empresa'],
+    features: ['Automatización de tareas del negocio', 'Mensajes y pedidos organizados automáticamente', 'Sistema adaptado a tu empresa'],
   },
   {
     icon: '◉',
@@ -33,14 +33,14 @@ export const SERVICES = [
     tag: 'CONSULTORÍA GRATIS',
     title: 'Estrategia Digital',
     desc: 'Analizamos tu negocio y te mostramos qué tecnología necesitas para mejorar tus ventas y organización.',
-    features: ['Revisión de tu negocio digital','Plan claro de lo que deberías implementar','Recomendaciones personalizadas'],
+    features: ['Revisión de tu negocio digital', 'Plan claro de lo que deberías implementar', 'Recomendaciones personalizadas'],
   },
   {
     icon: '◫',
     tag: 'PLATAFORMA',
     title: 'Base Tecnológica de tu Negocio',
     desc: 'Construimos la tecnología que hace que tu sistema, web y automatizaciones funcionen rápido, seguro y sin problemas.',
-    features: ['Funcionamiento estable 24/7','Preparado para más clientes','Seguridad y respaldo automático'],
+    features: ['Funcionamiento estable 24/7', 'Preparado para más clientes', 'Seguridad y respaldo automático'],
   },
 ]
 
@@ -75,45 +75,45 @@ export const STEPS = [
 
 // ─── INDUSTRIES ───
 export const INDUSTRIES = [
-  { 
-    icon: '🏪', 
-    title: 'Tiendas y Negocios', 
-    desc: 'Control de productos, ventas organizadas y pedidos desde internet o WhatsApp.' 
+  {
+    icon: '🏪',
+    title: 'Tiendas y Negocios',
+    desc: 'Control de productos, ventas organizadas y pedidos desde internet o WhatsApp.'
   },
-  { 
-    icon: '🏥', 
-    title: 'Salud y Clínicas', 
-    desc: 'Sistema de citas, registro de pacientes y atención más organizada.' 
+  {
+    icon: '🏥',
+    title: 'Salud y Clínicas',
+    desc: 'Sistema de citas, registro de pacientes y atención más organizada.'
   },
-  { 
-    icon: '🎓', 
-    title: 'Educación y Academias', 
-    desc: 'Plataformas para clases, registro de alumnos y seguimiento de progreso.' 
+  {
+    icon: '🎓',
+    title: 'Educación y Academias',
+    desc: 'Plataformas para clases, registro de alumnos y seguimiento de progreso.'
   },
-  { 
-    icon: '🍽️', 
-    title: 'Restaurantes', 
-    desc: 'Pedidos en línea, reservas y atención rápida a clientes.' 
+  {
+    icon: '🍽️',
+    title: 'Restaurantes',
+    desc: 'Pedidos en línea, reservas y atención rápida a clientes.'
   },
-  { 
+  {
     icon: '🐄',
     title: 'Agroveterinarias y Campo',
-    desc: 'Control de productos, pedidos de agricultores y ventas organizadas.' 
+    desc: 'Control de productos, pedidos de agricultores y ventas organizadas.'
   },
-  { 
-    icon: '💼', 
-    title: 'Empresas de Servicios', 
-    desc: 'Sistema para clientes, seguimiento de trabajos y control de pagos.' 
+  {
+    icon: '💼',
+    title: 'Empresas de Servicios',
+    desc: 'Sistema para clientes, seguimiento de trabajos y control de pagos.'
   },
-  { 
-    icon: '🛒', 
-    title: 'Ventas por Internet', 
-    desc: 'Tiendas online listas para vender productos y recibir pedidos.' 
+  {
+    icon: '🛒',
+    title: 'Ventas por Internet',
+    desc: 'Tiendas online listas para vender productos y recibir pedidos.'
   },
-  { 
-    icon: '🏨', 
-    title: 'Turismo y Hospedaje', 
-    desc: 'Reservas en línea, atención a visitantes y organización de servicios.' 
+  {
+    icon: '🏨',
+    title: 'Turismo y Hospedaje',
+    desc: 'Reservas en línea, atención a visitantes y organización de servicios.'
   },
 ]
 
@@ -127,8 +127,8 @@ export const IMPACT_STATS = [
 
 // ─── HERO STATS ───
 export const HERO_STATS = [
-  { n: '3+', label: 'Años' }, 
-  { n: '98%', label: 'Satisfacción' }, 
+  { n: '4+', label: 'Años' },
+  { n: '100%', label: 'Satisfacción' },
   { n: '10x', label: 'Crecimiento' },
 ]
 
