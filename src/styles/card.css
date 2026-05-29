@@ -1,0 +1,491 @@
+/* src/styles/card.css */
+
+.card-app-wrapper {
+  font-family: 'Poppins', 'DM Sans', sans-serif;
+  min-height: 100vh;
+  padding: 2rem;
+  color: #fff;
+  cursor: auto;
+}
+
+.card-app-wrapper.bg-dark {
+  background: #050505;
+}
+
+.card-app-wrapper.public-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+/* Background Templates */
+.bg-neon-city {
+  background: #020014;
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(119, 0, 255, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 85% 30%, rgba(0, 221, 255, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(255, 0, 128, 0.1) 0%, transparent 50%);
+}
+
+.bg-deep-ocean {
+  background: #000b18;
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(0, 162, 255, 0.2) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(0, 255, 179, 0.15) 0%, transparent 40%);
+}
+
+.card-app-wrapper * {
+  box-sizing: border-box;
+}
+
+.card-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Scrollbar para el editor */
+.editor-scroll {
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  padding-right: 15px;
+}
+.editor-scroll::-webkit-scrollbar { width: 6px; }
+.editor-scroll::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); border-radius: 10px; }
+.editor-scroll::-webkit-scrollbar-thumb { background: var(--accent, #00f5c4); border-radius: 10px; }
+
+/* Panel de control */
+.editor-panel {
+  background: rgba(10, 10, 15, 0.65);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4), inset 0 0 0 1px rgba(255,255,255,0.02);
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-panel h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #fff, var(--accent, #00f5c4));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  letter-spacing: -1px;
+}
+
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem 0;
+  color: #fff;
+  border-bottom: 1px dashed rgba(255,255,255,0.1);
+  padding-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.input-group label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted, #a0aabf);
+  margin-left: 0.2rem;
+}
+
+.input-group input, 
+.input-group textarea, 
+.input-group select {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus,
+.input-group select:focus {
+  background: rgba(0,0,0,0.5);
+  border-color: var(--accent, #00f5c4);
+  box-shadow: 0 0 0 4px rgba(0, 245, 196, 0.1);
+}
+
+.dynamic-item {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.dynamic-item:hover {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.1);
+}
+
+.dynamic-item input,
+.dynamic-item select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.dynamic-item input:focus,
+.dynamic-item select:focus {
+  border-color: var(--accent, #00f5c4);
+}
+
+.btn-remove-small {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #ff4d6d;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 4px 10px rgba(255, 77, 109, 0.3);
+}
+.btn-remove-small:hover {
+  transform: scale(1.15);
+}
+
+.btn-add {
+  background: transparent;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  color: var(--text, #e8e8f0);
+  padding: 1rem;
+  border-radius: 12px;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+.btn-add:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent, #00f5c4);
+  color: var(--accent, #00f5c4);
+}
+
+.btn-publicar {
+  background: var(--accent, #00f5c4);
+  border: none;
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 16px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #000;
+  cursor: pointer;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: 0.3s;
+  box-shadow: 0 10px 30px rgba(0, 245, 196, 0.2);
+}
+.btn-publicar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(0, 245, 196, 0.4);
+}
+
+/* =========================================
+   ESTILOS DE LA TARJETA (VISTA PREVIA Y PÚBLICA)
+   ========================================= */
+
+.preview-card-wrapper {
+  position: sticky;
+  top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* La Tarjeta Principal */
+.business-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(10, 15, 30, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow lines inside the card */
+.business-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 242, 254, 0.5), transparent);
+}
+
+/* Header: Logo and Company */
+.bc-header {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bc-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.bc-logo img {
+  height: 32px;
+  width: auto;
+}
+.bc-slogan {
+  font-size: 0.75rem;
+  color: #a0aabf;
+  margin-top: 0.3rem;
+}
+
+/* Profile Section */
+.bc-profile {
+  margin-bottom: 2rem;
+}
+.bc-avatar-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, #00f2fe, #ff0844);
+}
+.bc-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #111;
+  border: 3px solid #0a0f1e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bc-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bc-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+}
+.bc-role {
+  font-size: 0.9rem;
+  color: #00f2fe;
+  font-weight: 500;
+}
+
+/* Glass Panels (for sections) */
+.bc-panel {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  padding: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.bc-panel-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+/* Contact Grid */
+.bc-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  text-align: left;
+}
+.bc-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: #d1d5db;
+  text-decoration: none;
+  transition: 0.2s;
+  word-break: break-word;
+}
+.bc-contact-item:hover {
+  color: #fff;
+}
+.bc-contact-icon {
+  color: #ff4d6d;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Services Grid */
+.bc-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 0.8rem;
+}
+.bc-service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.bc-service-icon-wrapper {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00f2fe;
+  transition: 0.3s;
+}
+.bc-service-item:hover .bc-service-icon-wrapper {
+  background: rgba(0, 242, 254, 0.1);
+  border-color: #00f2fe;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,242,254,0.2);
+}
+.bc-service-name {
+  font-size: 0.7rem;
+  color: #cbd5e1;
+  line-height: 1.2;
+}
+
+/* Social Connections */
+.bc-social-flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+.bc-social-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+}
+.bc-social-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.bc-social-item:hover .bc-social-btn {
+  transform: scale(1.1);
+}
+.bc-social-handle {
+  font-size: 0.65rem;
+  color: #a0aabf;
+}
+
+/* CTA Button */
+.bc-cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 3rem;
+  background: linear-gradient(90deg, #ff0844 0%, #ffb199 100%);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-top: 2rem;
+  box-shadow: 0 10px 25px rgba(255, 8, 68, 0.4);
+  transition: 0.3s;
+}
+.bc-cta-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 30px rgba(255, 8, 68, 0.6);
+}
+
+@media (max-width: 900px) {
+  .card-container { 
+    grid-template-columns: 1fr; 
+    gap: 2rem;
+  }
+  .editor-panel {
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+  }
+  .preview-card-wrapper {
+    position: relative;
+    top: 0;
+  }
+}

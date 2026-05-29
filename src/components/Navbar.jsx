@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useScrolled } from '../hooks/useScrolled'
 import { useWindowSize } from '../hooks/useWindowSize'
 import { NAV_LINKS } from '../data/constants'
+import { Link } from 'react-router-dom'
 
 export default function Navbar({ onContact }) {
   const scrolled = useScrolled(50)
@@ -39,7 +40,11 @@ export default function Navbar({ onContact }) {
                 onMouseLeave={e => e.target.style.color = 'var(--muted)'}
               >{link}</a>
             ))}
-            <button onClick={onContact} style={{ padding: '9px 20px', background: 'transparent', border: '1px solid var(--accent)', color: 'var(--accent)', fontFamily: "'Space Mono',monospace", fontSize: 10, letterSpacing: 2, cursor: 'none', textTransform: 'uppercase', transition: 'all 0.3s' }}
+            <Link to="/herramientas" style={{ padding: '9px 20px', background: 'var(--accent)', border: '1px solid var(--accent)', color: 'var(--black)', fontFamily: "'Space Mono',monospace", fontSize: 10, letterSpacing: 2, cursor: 'pointer', textTransform: 'uppercase', textDecoration: 'none', transition: 'all 0.3s' }}
+              onMouseEnter={e => { e.target.style.background = 'transparent'; e.target.style.color = 'var(--accent)' }}
+              onMouseLeave={e => { e.target.style.background = 'var(--accent)'; e.target.style.color = 'var(--black)' }}
+            >HERRAMIENTAS</Link>
+            <button onClick={onContact} style={{ padding: '9px 20px', background: 'transparent', border: '1px solid var(--accent)', color: 'var(--accent)', fontFamily: "'Space Mono',monospace", fontSize: 10, letterSpacing: 2, cursor: 'pointer', textTransform: 'uppercase', transition: 'all 0.3s' }}
               onMouseEnter={e => { e.target.style.background = 'var(--accent)'; e.target.style.color = 'var(--black)' }}
               onMouseLeave={e => { e.target.style.background = 'transparent'; e.target.style.color = 'var(--accent)' }}
             >CONTACTO</button>
@@ -64,7 +69,10 @@ export default function Navbar({ onContact }) {
               {link}
             </a>
           ))}
-          <button onClick={() => { onContact(); close() }} style={{ width: '100%', marginTop: 16, padding: 15, background: 'linear-gradient(135deg,var(--accent2),var(--accent))', border: 'none', color: 'var(--black)', fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: 2, cursor: 'pointer', textTransform: 'uppercase' }}>
+          <Link to="/herramientas" onClick={close} style={{ display: 'block', width: '100%', marginTop: 16, padding: 15, background: 'var(--accent)', border: 'none', color: 'var(--black)', fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: 2, cursor: 'pointer', textTransform: 'uppercase', textDecoration: 'none', textAlign: 'center', boxSizing: 'border-box' }}>
+            HERRAMIENTAS
+          </Link>
+          <button onClick={() => { onContact(); close() }} style={{ width: '100%', marginTop: 10, padding: 15, background: 'linear-gradient(135deg,var(--accent2),var(--accent))', border: 'none', color: 'var(--black)', fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 13, letterSpacing: 2, cursor: 'pointer', textTransform: 'uppercase' }}>
             CONTACTO
           </button>
         </div>

@@ -43,7 +43,7 @@ export default function Footer({ onContact }) {
           </div>
 
           {/* Contact */}
-          <div>
+          <address style={{ fontStyle: 'normal' }}>
             <div style={{ fontFamily: "'Space Mono',monospace", fontSize: 9, letterSpacing: 4, color: 'var(--accent)', marginBottom: 18 }}>CONTACTO</div>
             <div style={{ color: 'var(--muted)', fontSize: 13, marginBottom: 10 }}>hovocodex22@gmail.com</div>
             <div style={{ color: 'var(--muted)', fontSize: 13, marginBottom: 10 }}>+51 924073688</div>
@@ -52,7 +52,7 @@ export default function Footer({ onContact }) {
               onMouseEnter={e => { e.target.style.background = 'var(--accent)'; e.target.style.color = 'var(--black)' }}
               onMouseLeave={e => { e.target.style.background = 'transparent'; e.target.style.color = 'var(--accent)' }}
             >ESCRÍBENOS</button>
-          </div>
+          </address>
         </div>
 
         {/* Bottom */}
