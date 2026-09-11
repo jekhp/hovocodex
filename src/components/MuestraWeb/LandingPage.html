@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ===================================================================
+       DATOS DE LA MUESTRA / DEMO (SEO Y METADATOS)
+       =================================================================== -->
+    <title>Muestra Modelo - Landing Page Profesional S/ 50 | HOVOCODEX</title>
+    <meta name="description"
+        content="Muestra en vivo del modelo de Landing Page de 50 Soles. Estructura estándar, rápida, responsive y con botón de WhatsApp. Desarrollado por HOVOCODEX (+51 924 073 688)." />
+    <meta property="og:title" content="Muestra Modelo - Landing Page Profesional S/ 50 | HOVOCODEX" />
+    <meta property="og:description"
+        content="Mira cómo se verá tu página web con el paquete básico de S/ 50. Desarrollado por HOVOCODEX (+51 924 073 688)." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#1e3a8a" />
+
+    <style>
+        /* ===================================================================
+       VARIABLES DE DISEÑO Y COLOR (100% PERSONALIZABLES)
+       =================================================================== */
+        :root {
+            /* Paleta Corporativa */
+            --color-primary: #1e40af;
+            /* Azul corporativo principal */
+            --color-primary-hover: #1e3a8a;
+            /* Azul oscuro hover */
+            --color-primary-light: #eff6ff;
+            /* Fondo suave azul */
+
+            /* WhatsApp */
+            --color-whatsapp: #25d366;
+            /* Verde oficial */
+            --color-whatsapp-hover: #20ba5a;
+            /* Verde oscuro hover */
+
+            /* Superficies y Fondos */
+            --color-bg: #f8fafc;
+            /* Fondo general de la página */
+            --color-card: #ffffff;
+            /* Fondo de tarjetas */
+            --color-card-subtle: #f1f5f9;
+            /* Fondo sutil */
+
+            /* Tipografía y Contraste */
+            --color-text-main: #0f172a;
+            /* Texto principal de alto contraste */
+            --color-text-muted: #475569;
+            /* Texto secundario */
+            --color-text-light: #64748b;
+            /* Texto de detalles */
+
+            /* Bordes y Estructura */
+            --color-border: #e2e8f0;
+            /* Línea divisoria */
+            --color-border-focus: #94a3b8;
+            /* Línea de hover */
+            --radius: 8px;
+            /* Bordes limpios */
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* Reset global */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--color-bg);
+            color: var(--color-text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
+        /* -------------------------------------------------------------
+       BARRA SUPERIOR INFORMATIVA (AVISO DE DEMO / MUESTRA)
+       ------------------------------------------------------------- */
+        .top-demo-bar {
+            background-color: #0f172a;
+            color: #cbd5e1;
+            font-size: 0.8125rem;
+            padding: 0.55rem 1rem;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .top-demo-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+        }
+
+        .demo-tag {
+            background-color: #334155;
+            color: #f8fafc;
+            font-weight: 700;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .demo-order-link {
+            color: #60a5fa;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            transition: color 0.2s ease;
+        }
+
+        .demo-order-link:hover {
+            color: #93c5fd;
+            text-decoration: underline;
+        }
+
+        /* Botones principales */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.4rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: var(--radius);
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--color-whatsapp);
+            color: #ffffff;
+            box-shadow: 0 2px 6px rgba(37, 211, 102, 0.25);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--color-whatsapp-hover);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-primary-hover);
+        }
+
+        .btn-outline {
+            background-color: #ffffff;
+            border-color: var(--color-border);
+            color: var(--color-text-main);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--color-primary-light);
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+
+        .btn-sm {
+            padding: 0.45rem 0.9rem;
+            font-size: 0.85rem;
+        }
+
+        /* Encabezados de sección */
+        .section-header {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--color-primary);
+            background-color: var(--color-primary-light);
+            padding: 0.25rem 0.65rem;
+            border-radius: 4px;
+            margin-bottom: 0.6rem;
+        }
+
+        .section-title {
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: var(--color-text-main);
+            line-height: 1.25;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section-desc {
+            font-size: 1rem;
+            color: var(--color-text-muted);
+        }
+
+        section {
+            padding: 3.5rem 0;
+        }
+
+        /* -------------------------------------------------------------
+       1. HEADER (ENCABEZADO)
+       ------------------------------------------------------------- */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .nav-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 4.25rem;
+        }
+
+        .brand-logo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--color-text-main);
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .brand-sub {
+            font-size: 0.75rem;
+            color: var(--color-text-light);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links {
+            display: none;
+            list-style: none;
+            gap: 1.75rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .nav-links a {
+            color: var(--color-text-muted);
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-primary);
+        }
+
+        /* -------------------------------------------------------------
+       2. HERO SECTION
+       ------------------------------------------------------------- */
+        .hero-section {
+            background-color: #ffffff;
+            border-bottom: 1px solid var(--color-border);
+            padding: 3.75rem 0 4.25rem 0;
+            text-align: center;
+        }
+
+        .hero-box {
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .hero-status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #15803d;
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            margin-bottom: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .hero-title {
+            font-size: 2.35rem;
+            font-weight: 800;
+            color: var(--color-text-main);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            letter-spacing: -0.03em;
+        }
+
+        .hero-title span {
+            color: var(--color-primary);
+            text-decoration: underline;
+            text-decoration-color: #bfdbfe;
+            text-underline-offset: 4px;
+        }
+
+        .hero-sub {
+            font-size: 1.1rem;
+            color: var(--color-text-muted);
+            line-height: 1.65;
+            margin-bottom: 2rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            justify-content: center;
+            margin-bottom: 2.25rem;
+        }
+
+        .hero-trust-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--color-border);
+            text-align: left;
+        }
+
+        .hero-trust-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            font-size: 0.875rem;
+            color: var(--color-text-muted);
+        }
+
+        .hero-trust-bullet {
+            color: var(--color-primary);
+            font-weight: 800;
+        }
+
+        /* -------------------------------------------------------------
+       3. SECCIÓN SERVICIOS (ESTRUCTURA DE 6 TARJETAS EN TEXTO PURO)
+       ------------------------------------------------------------- */
+        .services-spec-note {
+            background-color: var(--color-primary-light);
+            border-left: 4px solid var(--color-primary);
+            padding: 0.85rem 1.15rem;
+            margin-bottom: 2rem;
+            font-size: 0.875rem;
+            color: #1e3a8a;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+        }
+
+        .service-card {
+            background-color: var(--color-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--color-primary);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .service-code {
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            letter-spacing: 0.05em;
+        }
+
+        .service-category {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--color-text-light);
+            text-transform: uppercase;
+        }
+
+        .service-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--color-text-main);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .service-desc {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            line-height: 1.55;
+            flex-grow: 1;
+            margin-bottom: 1rem;
+        }
+
+        .service-link {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding-top: 0.5rem;
+            border-top: 1px dashed var(--color-border);
+        }
+
+        .service-link:hover {
+            color: var(--color-primary-hover);
+            text-decoration: underline;
+        }
+
+        /* -------------------------------------------------------------
+       4. SECCIÓN NOSOTROS (BLOQUE TIPOGRÁFICO DE VALOR)
+       ------------------------------------------------------------- */
+        .about-box {
+            background-color: #ffffff;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 2rem 1.5rem;
+        }
+
+        .about-lead {
+            font-size: 1.05rem;
+            color: var(--color-text-main);
+            line-height: 1.7;
+            margin-bottom: 1.75rem;
+            border-left: 3px solid var(--color-primary);
+            padding-left: 1rem;
+        }
+
+        .about-pillars {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+        }
+
+        .pillar-card {
+            background-color: var(--color-bg);
+            border: 1px solid var(--color-border);
+            padding: 1.25rem;
+            border-radius: var(--radius);
+        }
+
+        .pillar-number {
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            margin-bottom: 0.35rem;
+            display: inline-block;
+            border-bottom: 2px solid var(--color-primary);
+            padding-bottom: 2px;
+        }
+
+        .pillar-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--color-text-main);
+            margin-bottom: 0.35rem;
+        }
+
+        .pillar-desc {
+            font-size: 0.875rem;
+            color: var(--color-text-muted);
+            line-height: 1.5;
+        }
+
+        /* -------------------------------------------------------------
+       5. SECCIÓN UBICACIÓN Y HORARIOS (TABLAS Y LISTAS CLARAS)
+       ------------------------------------------------------------- */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+        }
+
+        .info-panel {
+            background-color: #ffffff;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .info-panel-header {
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .info-panel-tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .info-panel-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--color-text-main);
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .info-table tr {
+            border-bottom: 1px dashed var(--color-border);
+        }
+
+        .info-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .info-table td {
+            padding: 0.45rem 0;
+        }
+
+        .info-table td.label {
+            color: var(--color-text-muted);
+        }
+
+        .info-table td.value {
+            text-align: right;
+            font-weight: 600;
+            color: var(--color-text-main);
+        }
+
+        /* -------------------------------------------------------------
+       6. FOOTER
+       ------------------------------------------------------------- */
+        .site-footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            padding: 2.75rem 0 1.5rem 0;
+            font-size: 0.875rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-title {
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .footer-nav-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            list-style: none;
+        }
+
+        .footer-nav-list a {
+            color: #cbd5e1;
+            font-weight: 600;
+        }
+
+        .footer-nav-list a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #1e293b;
+            padding-top: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.8rem;
+        }
+
+        .hovocodex-credit-link {
+            color: #cbd5e1;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            transition: color 0.2s ease;
+        }
+
+        .hovocodex-credit-link strong {
+            color: #60a5fa;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+
+        .hovocodex-credit-link:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .hovocodex-credit-link:hover strong {
+            color: #93c5fd;
+        }
+
+        /* -------------------------------------------------------------
+       7. BOTÓN FLOTANTE DE WHATSAPP
+       ------------------------------------------------------------- */
+        .whatsapp-float-box {
+            position: fixed;
+            bottom: 1.25rem;
+            right: 1.25rem;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .whatsapp-label {
+            display: none;
+            background-color: #0f172a;
+            color: #ffffff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 0.45rem 0.75rem;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .whatsapp-btn-float {
+            width: 3.5rem;
+            height: 3.5rem;
+            background-color: var(--color-whatsapp);
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .whatsapp-btn-float:hover {
+            background-color: var(--color-whatsapp-hover);
+            transform: scale(1.06);
+        }
+
+        .whatsapp-btn-float svg {
+            width: 1.9rem;
+            height: 1.9rem;
+            fill: currentColor;
+        }
+
+        /* -------------------------------------------------------------
+       RESPONSIVE DESIGN (MEDIA QUERIES)
+       ------------------------------------------------------------- */
+        @media (min-width: 640px) {
+            .hero-actions {
+                flex-direction: row;
+            }
+
+            .hero-trust-grid {
+                grid-template-columns: repeat(3, 1fr);
+                text-align: center;
+            }
+
+            .hero-trust-item {
+                justify-content: center;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-pillars {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .info-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+
+            .whatsapp-label {
+                display: block;
+            }
+
+            .hero-title {
+                font-size: 2.85rem;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-content {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===================================================================
+       BARRA DE MUESTRA (ENLACE DIRECTO A HOVOCODEX: +51 924 073 688)
+       =================================================================== -->
+    <aside class="top-demo-bar">
+        <div class="container">
+            <div class="top-demo-content">
+                <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                    <a href="/herramientas" style="color: #00f5c4; text-decoration: none; font-weight: 700; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border: 1px solid rgba(0,245,196,0.3); border-radius: 4px; background: rgba(0,245,196,0.08); transition: all 0.2s;" onmouseover="this.style.background='rgba(0,245,196,0.2)'" onmouseout="this.style.background='rgba(0,245,196,0.08)'">&larr; Volver a Herramientas</a>
+                    <span class="demo-tag">Muestra Oficial</span>
+                    <span>Modelo de Landing Page Estándar (Plan S/ 50)</span>
+                </div>
+                <div>
+                    <!-- ENLACE DIRECTO DE PEDIDO A HOVOCODEX (+51 924 073 688) -->
+                    <a href="https://wa.me/51924073688?text=Hola%20HOVOCODEX,%20vi%20la%20muestra%20de%20la%20p%C3%A1gina%20web%20de%20S/%2050%20y%20quiero%20hacer%20mi%20pedido"
+                        target="_blank" rel="noopener noreferrer" class="demo-order-link">
+                        Pedir mi página web por S/ 50 a HOVOCODEX (+51 924 073 688) &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ===================================================================
+       1. HEADER (ENCABEZADO FIJO)
+       =================================================================== -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav-box">
+
+                <!-- EDITAR AQUÍ: NOMBRE Y RUBRO DEL NEGOCIO CLIENTE -->
+                <a href="#" class="brand-logo">
+                    <span class="brand-name">Nombre de tu Negocio</span>
+                    <span class="brand-sub">Servicios Profesionales</span>
+                </a>
+
+                <!-- ENLACES DE NAVEGACIÓN -->
+                <ul class="nav-links">
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#ubicacion">Horarios</a></li>
+                </ul>
+
+                <!-- BOTÓN DE CONTACTO WHATSAPP HEADER -->
+                <!-- EDITAR AQUÍ: NÚMERO DE WHATSAPP DEL CLIENTE -->
+                <a href="https://wa.me/51999999999?text=Hola,%20deseo%20hacer%20una%20consulta" target="_blank"
+                    rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">
+                    WhatsApp
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===================================================================
+         2. HERO SECTION (PORTADA PRINCIPAL)
+         =================================================================== -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-box">
+
+                    <div class="hero-status-pill">
+                        Atención Inmediata por WhatsApp
+                    </div>
+
+                    <!-- EDITAR AQUÍ: TÍTULO PRINCIPAL (PROPUESTA DE VALOR) -->
+                    <h1 class="hero-title">
+                        Servicios y soluciones confiables para <span>tu negocio o proyecto</span>
+                    </h1>
+
+                    <!-- EDITAR AQUÍ: SUBTÍTULO O RESUMEN DIRECTO -->
+                    <p class="hero-sub">
+                        Atención rápida, presupuestos transparentes y trabajo garantizado. Escríbenos directamente para
+                        asesorarte y resolver tus dudas sin compromiso.
+                    </p>
+
+                    <!-- EDITAR AQUÍ: BOTONES DE ACCIÓN -->
+                    <div class="hero-actions">
+                        <a href="https://wa.me/51999999999?text=Hola,%20quiero%20solicitar%20una%20cotización"
+                            target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.77.814 2.796.814 3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.467-4.444 9.911-9.911 9.911-1.745 0-3.411-.459-4.881-1.326l-5.208 1.367 1.39-5.074c-.958-1.526-1.464-3.283-1.464-5.088 0-5.467 4.444-9.911 9.911-9.911 5.467 0 9.911 4.444 9.911 9.911z" />
+                            </svg>
+                            Contactar por WhatsApp
+                        </a>
+                        <a href="#servicios" class="btn btn-outline">
+                            Ver Catálogo de Servicios
+                        </a>
+                    </div>
+
+                    <!-- PUNTOS CLAVE DE CONFIANZA -->
+                    <div class="hero-trust-grid">
+                        <div class="hero-trust-item">
+                            <span class="hero-trust-bullet">[01]</span>
+                            <span>Respuesta rápida y directa</span>
+                        </div>
+                        <div class="hero-trust-item">
+                            <span class="hero-trust-bullet">[02]</span>
+                            <span>Cotización sin costo</span>
+                        </div>
+                        <div class="hero-trust-item">
+                            <span class="hero-trust-bullet">[03]</span>
+                            <span>Garantía de satisfacción</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+         3. SECCIÓN SERVICIOS (GRID FIJO ESTÁNDAR: 6 SERVICIOS)
+         =================================================================== -->
+        <section id="servicios">
+            <div class="container">
+
+                <div class="section-header">
+                    <span class="section-tag">Servicios Disponibles</span>
+                    <h2 class="section-title">Catálogo de Servicios</h2>
+                    <p class="section-desc">Estructura organizada en cuadrícula para presentar tus servicios de forma
+                        clara y profesional.</p>
+                </div>
+
+                <!-- NOTA DEL PLAN ESTÁNDAR DE 50 SOLES -->
+                <div class="services-spec-note">
+                    <strong>Especificación del Plan S/ 50:</strong> Capacidad estándar de hasta <strong>6 servicios o
+                        productos principales</strong>. Cada bloque incluye código, título, descripción y enlace de
+                    cotización.
+                </div>
+
+                <!-- GRID DE 6 TARJETAS ESTÁNDAR -->
+                <div class="services-grid">
+
+                    <!-- SERVICIO 1 -->
+                    <!-- EDITAR AQUÍ: SERVICIO 1 -->
+                    <article class="service-card">
+                        <div class="service-meta">
+                            <span class="service-code">[SRV-01]</span>
+                            <span class="service-category">Principal</span>
+                        </div>
+                        <h3 class="service-title">Nombre del Servicio 1</h3>
+                        <p class="service-desc">
+                            Descripción clara del primer servicio o producto. Detalla qué incluye, el tiempo de entrega
+                            y el beneficio directo para el cliente.
+                        </p>
+                        <a href="https://wa.me/51999999999?text=Hola,%20deseo%20cotizar%20el%20Servicio%201"
+                            target="_blank" rel="noopener noreferrer" class="service-link">
+                            Consultar precio por WhatsApp &rarr;
+                        </a>
+                    </article>
+
+                    <!-- SERVICIO 2 -->
+                    <!-- EDITAR AQUÍ: SERVICIO 2 -->
+                    <article class="service-card">
+                        <div class="service-meta">
+                            <span class="service-code">[SRV-02]</span>
+                            <span class="service-category">Especialidad</span>
+                        </div>
+                        <h3 class="service-title">Nombre del Servicio 2</h3>
+                        <p class="service-desc">
+                            Descripción del segundo servicio. Explica por qué tu negocio es la mejor opción en este
+                            rubro y las ventajas de tu atención.
+                        </p>
+                        <a href="https://wa.me/51999999999?text=Hola,%20deseo%20cotizar%20el%20Servicio%202"
+                            target="_blank" rel="noopener noreferrer" class="service-link">
+                            Consultar precio por WhatsApp &rarr;
+                        </a>
+                    </article>
+
+                    <!-- SERVICIO 3 -->
+                    <!-- EDITAR AQUÍ: SERVICIO 3 -->
+                    <article class="service-card">
+                        <div class="service-meta">
+                            <span class="service-code">[SRV-03]</span>
+                            <span class="service-category">Mantenimiento</span>
+                        </div>
+                        <h3 class="service-title">Nombre del Servicio 3</h3>
+                        <p class="service-desc">
+                            Servicio de mantenimiento preventivo, reparaciones, soporte o atención urgente para clientes
+                            que requieren solución rápida.
+                        </p>
+                        <a href="https://wa.me/51999999999?text=Hola,%20deseo%20cotizar%20el%20Servicio%203"
+                            target="_blank" rel="noopener noreferrer" class="service-link">
+                            Consultar precio por WhatsApp &rarr;
+                        </a>
+                    </article>
+
+                    <!-- SERVICIO 4 -->
+                    <!-- EDITAR AQUÍ: SERVICIO 4 -->
+                    <article class="service-card">
+                        <div class="service-meta">
+                            <span class="service-code">[SRV-04]</span>
+                            <span class="service-category">Paquetes</span>
+                        </div>
+                        <h3 class="service-title">Nombre del Servicio 4</h3>
+                        <p class="service-desc">
+                            Combos especiales, paquetes para empresas, compras por volumen o promociones por temporada
+                            con precios preferenciales.
+                        </p>
+                        <a href="https://wa.me/51999999999?text=Hola,%20deseo%20cotizar%20el%20Servicio%204"
+                            target="_blank" rel="noopener noreferrer" class="service-link">
+                            Consultar precio por WhatsApp &rarr;
+                        </a>
+                    </article>
+
+                    <!-- SERVICIO 5 -->
+                    <!-- EDITAR AQUÍ: SERVICIO 5 -->
+                    <article class="service-card">
+                        <div class="service-meta">
+                            <span class="service-code">[SRV-05]</span>
+                            <span class="service-category">A Domicilio</span>
+                        </div>
+                        <h3 class="service-title">Nombre del Servicio 5</h3>
+                        <p class="service-desc">
+                            Visitas técnicas, diagnósticos en tu local o domicilio, asesorías y presupuestos hechos a la
+                            medida exacta de tu necesidad.
+                        </p>
+                        <a href="https://wa.me/51999999999?text=Hola,%20deseo%20cotizar%20el%20Servicio%205"
+                            target="_blank" rel="noopener noreferrer" class="service-link">
+                            Consultar precio por WhatsApp &rarr;
+                        </a>
+                    </article>
+
+                    <!-- SERVICIO 6 -->
+                    <!-- EDITAR AQUÍ: SERVICIO 6 -->
+                    <article class="service-card">
+                        <div class="service-meta">
+                            <span class="service-code">[SRV-06]</span>
+                            <span class="service-category">Garantía</span>
+                        </div>
+                        <h3 class="service-title">Nombre del Servicio 6</h3>
+                        <p class="service-desc">
+                            Soporte posterior, seguimiento de trabajos entregados y atención prioritaria para clientes
+                            frecuentes del negocio.
+                        </p>
+                        <a href="https://wa.me/51999999999?text=Hola,%20deseo%20cotizar%20el%20Servicio%206"
+                            target="_blank" rel="noopener noreferrer" class="service-link">
+                            Consultar precio por WhatsApp &rarr;
+                        </a>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================================================================
+         4. SECCIÓN NOSOTROS (PUNTOS CLAVE Y PRESENTACIÓN)
+         =================================================================== -->
+        <section id="nosotros"
+            style="background-color: #ffffff; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+            <div class="container">
+
+                <div class="section-header">
+                    <span class="section-tag">Presentación</span>
+                    <h2 class="section-title">Sobre Nuestro Negocio</h2>
+                    <p class="section-desc">Información clara para generar confianza y credibilidad con tus clientes.
+                    </p>
+                </div>
+
+                <div class="about-box">
+                    <!-- EDITAR AQUÍ: PÁRRAFO DE PRESENTACIÓN -->
+                    <p class="about-lead">
+                        Somos un negocio enfocado en brindar soluciones prácticas, puntuales y de calidad. Nos
+                        caracterizamos por un trato transparente, presupuestos justos desde el primer contacto y un
+                        compromiso total con los resultados que entregamos a cada cliente.
+                    </p>
+
+                    <!-- 3 PILARES CLAVE -->
+                    <div class="about-pillars">
+
+                        <!-- PILAR 1 -->
+                        <!-- EDITAR AQUÍ: PILAR 1 -->
+                        <div class="pillar-card">
+                            <span class="pillar-number">PILAR 01</span>
+                            <h3 class="pillar-title">Experiencia y Puntualidad</h3>
+                            <p class="pillar-desc">Cumplimos los plazos acordados con altos estándares de calidad en
+                                cada trabajo.</p>
+                        </div>
+
+                        <!-- PILAR 2 -->
+                        <!-- EDITAR AQUÍ: PILAR 2 -->
+                        <div class="pillar-card">
+                            <span class="pillar-number">PILAR 02</span>
+                            <h3 class="pillar-title">Trato Directo y Personalizado</h3>
+                            <p class="pillar-desc">Atención sin intermediarios para responder a tus requerimientos
+                                específicos por WhatsApp.</p>
+                        </div>
+
+                        <!-- PILAR 3 -->
+                        <!-- EDITAR AQUÍ: PILAR 3 -->
+                        <div class="pillar-card">
+                            <span class="pillar-number">PILAR 03</span>
+                            <h3 class="pillar-title">Tarifas Claras y Justas</h3>
+                            <p class="pillar-desc">Precios transparentes y sin cobros ocultos. Presupuestos detallados
+                                antes de iniciar.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================================================================
+         5. SECCIÓN UBICACIÓN Y HORARIOS (TABLAS ESTRUCTURADAS)
+         =================================================================== -->
+        <section id="ubicacion">
+            <div class="container">
+
+                <div class="section-header">
+                    <span class="section-tag">Atención y Cobertura</span>
+                    <h2 class="section-title">Ubicación y Horarios</h2>
+                    <p class="section-desc">Datos de contacto para coordinar visitas, entregas o consultas presenciales.
+                    </p>
+                </div>
+
+                <div class="info-grid">
+
+                    <!-- PANEL 1: DIRECCIÓN -->
+                    <!-- EDITAR AQUÍ: DIRECCIÓN -->
+                    <div class="info-panel">
+                        <div class="info-panel-header">
+                            <span class="info-panel-tag">Punto de Atención</span>
+                            <h3 class="info-panel-title">Dirección Principal</h3>
+                        </div>
+                        <table class="info-table">
+                            <tr>
+                                <td class="label">Ubicación:</td>
+                                <td class="value">Av. Principal #123</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Local / Ref:</td>
+                                <td class="value">Oficina 201 (Ref. Centro)</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Ciudad:</td>
+                                <td class="value">Lima / Ciudad, Perú</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- PANEL 2: HORARIO -->
+                    <!-- EDITAR AQUÍ: HORARIOS -->
+                    <div class="info-panel">
+                        <div class="info-panel-header">
+                            <span class="info-panel-tag">Jornada de Trabajo</span>
+                            <h3 class="info-panel-title">Horario de Atención</h3>
+                        </div>
+                        <table class="info-table">
+                            <tr>
+                                <td class="label">Lunes a Viernes:</td>
+                                <td class="value">08:30 - 19:00</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Sábados:</td>
+                                <td class="value">09:00 - 14:00</td>
+                            </tr>
+                            <tr>
+                                <td class="label">WhatsApp:</td>
+                                <td class="value" style="color: var(--color-whatsapp);">Mensajes 24/7</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- PANEL 3: COBERTURA -->
+                    <!-- EDITAR AQUÍ: COBERTURA -->
+                    <div class="info-panel">
+                        <div class="info-panel-header">
+                            <span class="info-panel-tag">Zona Operativa</span>
+                            <h3 class="info-panel-title">Área de Cobertura</h3>
+                        </div>
+                        <table class="info-table">
+                            <tr>
+                                <td class="label">Presencial:</td>
+                                <td class="value">En local comercial</td>
+                            </tr>
+                            <tr>
+                                <td class="label">A Domicilio:</td>
+                                <td class="value">En todo el distrito</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Digital:</td>
+                                <td class="value">A nivel nacional</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================================================================
+       6. FOOTER (PIE DE PÁGINA)
+       =================================================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+
+                <div>
+                    <!-- EDITAR AQUÍ: NOMBRE EN FOOTER -->
+                    <div class="footer-title">Nombre de tu Negocio</div>
+                    <p style="margin-top: 0.25rem;">Atención al cliente: +51 999 999 999 &bull; Perú</p>
+                </div>
+
+                <!-- EDITAR AQUÍ: ENLACES A REDES SOCIALES -->
+                <ul class="footer-nav-list">
+                    <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="https://wa.me/51999999999" target="_blank" rel="noopener noreferrer"
+                            style="color: var(--color-whatsapp);">WhatsApp</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nombre de tu Negocio. Todos los derechos reservados.</p>
+
+                <!-- ENLACE DIRECTO DE CRÉDITO Y PEDIDO A HOVOCODEX (+51 924 073 688) -->
+                <a href="https://wa.me/51924073688?text=Hola%20HOVOCODEX,%20deseo%20solicitar%20el%20dise%C3%B1o%20de%20mi%20p%C3%A1gina%20web%20de%20S/%2050"
+                    target="_blank" rel="noopener noreferrer" class="hovocodex-credit-link"
+                    title="Pedir página web a HOVOCODEX por WhatsApp">
+                    Desarrollado por <strong>HOVOCODEX</strong> &bull; Pedir Web (+51 924 073 688)
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================================================================
+       7. BOTÓN FLOTANTE DE WHATSAPP (FIJO EN ESQUINA INFERIOR DERECHA)
+       EDITAR AQUÍ: NÚMERO DE WHATSAPP DEL CLIENTE (Reemplazar 51999999999)
+       =================================================================== -->
+    <div class="whatsapp-float-box">
+        <span class="whatsapp-label">Contactar por WhatsApp</span>
+        <a href="https://wa.me/51999999999?text=Hola,%20quisiera%20hacer%20una%20consulta" target="_blank"
+            rel="noopener noreferrer" class="whatsapp-btn-float" aria-label="Contactar por WhatsApp"
+            id="btn-whatsapp-flotante">
+            <svg viewBox="0 0 24 24">
+                <path
+                    d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.77.814 2.796.814 3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm9.969 5.766c0 5.467-4.444 9.911-9.911 9.911-1.745 0-3.411-.459-4.881-1.326l-5.208 1.367 1.39-5.074c-.958-1.526-1.464-3.283-1.464-5.088 0-5.467 4.444-9.911 9.911-9.911 5.467 0 9.911 4.444 9.911 9.911z" />
+            </svg>
+        </a>
+    </div>
+
+</body>
+
+</html>

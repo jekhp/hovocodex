@@ -32,7 +32,7 @@ export default function ToolsPage() {
         </p>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: isTablet ? '1fr' : '1fr 1fr', gap: 32, width: '100%', maxWidth: 1000 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: isTablet ? '1fr' : 'repeat(auto-fit, minmax(300px, 1fr))', gap: 32, width: '100%', maxWidth: 1100 }}>
         {/* Card 1: VCard Creator */}
         <Link to="/card" style={{ textDecoration: 'none' }}>
           <div style={{
@@ -75,7 +75,54 @@ export default function ToolsPage() {
           </div>
         </Link>
 
-        {/* Card 2: Coming Soon */}
+        {/* Card 2: Muestra Landing Page */}
+        <Link to="/muestra-web" style={{ textDecoration: 'none' }}>
+          <div style={{
+            background: 'rgba(255,255,255,0.03)',
+            border: '1px solid rgba(0,245,196,0.3)',
+            borderRadius: 16,
+            padding: 40,
+            height: '100%',
+            transition: 'all 0.4s ease',
+            cursor: 'pointer',
+            boxSizing: 'border-box',
+            display: 'flex',
+            flexDirection: 'column',
+            position: 'relative',
+            overflow: 'hidden'
+          }}
+          onMouseEnter={e => {
+            e.currentTarget.style.transform = 'translateY(-10px)';
+            e.currentTarget.style.boxShadow = '0 20px 40px rgba(0,245,196,0.15)';
+            e.currentTarget.style.background = 'rgba(0,245,196,0.05)';
+          }}
+          onMouseLeave={e => {
+            e.currentTarget.style.transform = 'none';
+            e.currentTarget.style.boxShadow = 'none';
+            e.currentTarget.style.background = 'rgba(255,255,255,0.03)';
+          }}>
+            <div style={{ position: 'absolute', top: 20, right: 20, display: 'flex', gap: 6 }}>
+              <span style={{ background: 'rgba(0,245,196,0.15)', border: '1px solid rgba(0,245,196,0.4)', color: 'var(--accent)', padding: '4px 10px', borderRadius: 20, fontSize: 10, fontFamily: "'Space Mono',monospace", fontWeight: 'bold' }}>
+                S/ 50
+              </span>
+              <span style={{ background: 'var(--accent)', color: 'var(--black)', padding: '4px 12px', borderRadius: 20, fontSize: 10, fontFamily: "'Space Mono',monospace", fontWeight: 'bold' }}>
+                ACTIVO
+              </span>
+            </div>
+            <div style={{ fontSize: 40, marginBottom: 20 }}>🌐</div>
+            <h3 style={{ fontFamily: "'Syne',sans-serif", fontSize: 24, fontWeight: 700, color: 'var(--text)', marginBottom: 12 }}>
+              Muestra Landing Page
+            </h3>
+            <p style={{ fontFamily: "'Space Mono',monospace", fontSize: 14, color: 'var(--muted)', lineHeight: 1.6, flexGrow: 1 }}>
+              Explora la muestra en vivo de nuestro modelo de landing page profesional de S/ 50: rápida, responsive y con botón de WhatsApp para captar clientes.
+            </p>
+            <div style={{ marginTop: 24, display: 'flex', alignItems: 'center', color: 'var(--accent)', fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 14 }}>
+              Ver muestra web <span style={{ marginLeft: 8 }}>→</span>
+            </div>
+          </div>
+        </Link>
+
+        {/* Card 3: Coming Soon */}
         <div style={{
           background: 'rgba(255,255,255,0.02)',
           border: '1px dashed rgba(255,255,255,0.15)',

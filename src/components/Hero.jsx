@@ -61,24 +61,6 @@ export default function Hero({ onContact }) {
             Ver Servicios
           </a>
         </div>
-
-        {/* Stats */}
-        <div style={{ display: 'flex', gap: isMobile ? 24 : 48, marginTop: isMobile ? 40 : 64, animation: 'fadeUp 0.8s ease 1.1s both', flexWrap: 'wrap' }}>
-          {HERO_STATS.map(({ n, label }) => (
-            <div key={label}>
-              <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: isMobile ? 28 : 'clamp(26px,4vw,44px)', color: 'var(--accent)' }}>{n}</div>
-              <div style={{ fontFamily: "'Space Mono',monospace", fontSize: 9, color: 'var(--muted)', letterSpacing: 3, textTransform: 'uppercase' }}>{label}</div>
-            </div>
-          ))}
-        </div>
-
-        {/* Scroll indicator — hide on mobile */}
-        {!isMobile && (
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10, marginTop: 48 }}>
-            <div style={{ width: 1, height: 48, background: 'linear-gradient(to bottom,var(--accent),transparent)', animation: 'float 2.5s ease-in-out infinite' }} />
-            <span style={{ fontFamily: "'Space Mono',monospace", fontSize: 8, letterSpacing: 5, color: 'var(--muted)' }}>SCROLL</span>
-          </div>
-        )}
       </div>
     </section>
   )

@@ -1,0 +1,9 @@
+# Robots.txt para HOVOCODEX Technologies
+User-agent: *
+Allow: /
+
+# Bloquear APIs internas y datos no indexables
+Disallow: /api/
+
+# Sitemap oficial
+Sitemap: https://hovocodex.com/sitemap.xml

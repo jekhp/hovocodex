@@ -1,7 +1,6 @@
 import { useWindowSize } from '../hooks/useWindowSize'
 
-const FOOTER_SERVICES = ['Agentes IA','Desarrollo Web','Software Custom','Consultoría']
-const SOCIAL = ['LinkedIn','Twitter','GitHub']
+const FOOTER_SERVICES = ['Agentes IA', 'Desarrollo Web', 'Software Custom', 'Consultoría']
 
 export default function Footer({ onContact }) {
   const { isMobile, isTablet } = useWindowSize()
@@ -21,14 +20,6 @@ export default function Footer({ onContact }) {
             <p style={{ color: 'var(--muted)', lineHeight: 1.8, fontSize: 13, maxWidth: 300, marginBottom: 20 }}>
               Especialistas en desarrollo de software y web para empresas que buscan la innovación. Tu aliado tecnológico para crecer.
             </p>
-            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-              {SOCIAL.map(s => (
-                <div key={s} style={{ padding: '6px 12px', border: '1px solid var(--border)', fontFamily: "'Space Mono',monospace", fontSize: 9, color: 'var(--muted)', letterSpacing: 2, transition: 'all 0.2s', cursor: 'pointer' }}
-                  onMouseEnter={e => { e.target.style.borderColor = 'var(--accent)'; e.target.style.color = 'var(--accent)' }}
-                  onMouseLeave={e => { e.target.style.borderColor = 'var(--border)'; e.target.style.color = 'var(--muted)' }}
-                >{s}</div>
-              ))}
-            </div>
           </div>
 
           {/* Services */}
